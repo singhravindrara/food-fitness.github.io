@@ -1,0 +1,278 @@
+@import url('../css/fonts.css');
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+:root{
+
+    /* theme colors*/
+
+    --text-gray: #3f4954;
+    --text-light: #BBA1ED;
+    --bg-color: #B3B3F1;
+    --white: #FFFDEF;
+    --midnight: #162844;
+
+    /* gradient colors */
+    --sky: #84FFFF;
+    /*theme font family*/
+    --Solway:'solway',cursive;
+    --abel:'abel',regular;
+    --pacifico:'pacifico',regular;
+}
+
+
+
+/*----global-classes------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Solway);
+    font-size: 2.5rem;
+
+}
+
+h3{
+    font-family: var(--abel);
+    font-size: 1.5rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-family: var(--pacifico);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--abel);
+}
+
+
+
+/*----global-classes------*/
+
+
+/* nav-bar*/
+
+.nav{
+    background: white;
+    padding:0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition:height .9s ease-in-out ;
+
+}
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top:0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color:var(--text-gray);
+}
+
+
+.collapse {
+    height: 30rem;
+
+}
+
+.nav .nav-items{
+    list-style-type: none ;
+    display: flex;
+    margin: 0;
+}
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color:var(--white);
+}
+
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0; 
+   display: block;
+    font-family: var(--Solway);
+    font-size: 1.6rem;
+}
+.nav .social{
+    padding: 1.4rem 0;
+    
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover{
+color: #a1c4cf;
+}
+/*----nav-bar -------*/
+
+/*Main content */
+
+
+/*Site title */
+
+main .site-title{
+   
+    background-image: url('../assets/background/fitness.jpg');
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;  
+    display: flex;
+    justify-content: center; 
+}
+
+main .site-title .background{
+    padding-top: 10rem;
+    text-align: center;
+    color:var(--white);
+}
+
+main .site-title h1,h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color:var(--white);
+}
+/*Site title */
+
+/*blog carousel*/
+
+main .blog{
+    background: url('../assets/background/white.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+
+}
+main .blog-post .blog-content{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    width:  60%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+.container{
+    margin: 0 5vh;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto ;
+    width: 100%;
+
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+
+    color:var(--text-gray);
+    background:transparent;
+    font-size:2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--text-gray);
+    
+}
+
+
+/*blog carousel*/
+ 
+/*Main content */
+
+/*VIWEWPORT less than or equal to 750 px ---*/
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu,.nav .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+
+/*VIWEWPORT less than or equal to 750 px ---*/
